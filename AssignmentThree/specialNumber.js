@@ -16,9 +16,9 @@ function specialNumber(number){
       fact = fact*i;  
     }  
  
-    special = special + fact;  
+    special = special + fact;  //add factorial of each digit
 
-    number = parseInt(number / 10);  
+    number = parseInt(number / 10);  //reduce the number to get each digit
   }  
   if(temp == special)  
   {  

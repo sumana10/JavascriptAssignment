@@ -1,0 +1,1 @@
+Answer of question number four p tag has class attribute whereas it has been selected as id attribute in script which is getElementById instead of getElementsByClassName.

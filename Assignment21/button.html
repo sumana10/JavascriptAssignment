@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body  onbeforeunload="return myFunction()">
+  <button id="btn">Print Message Console</button>
+  <h2>Blockchain</h2>
+  <h2>Frontend</h2>
+  <h2 id="demo">Backend</h2>
+ <p>
+   <a href="https://ineuron.ai/">ineuron</a>
+ </p> 
+ <p></p>
+
+</body>
+<script>
+  document.getElementById('btn').addEventListener(('click'),()=>{
+    console.log("hello");
+  })
+  function myFunction() {
+    return "Write something clever here...";
+  }
+  let list = document.getElementsByTagName('h2');
+
+  for (e of list) {
+    e.style.color = "purple";
+  }
+  let h4 = document.createElement("h4");
+  h4.textContent = "something";
+  document.body.appendChild(h4);
+
+const element = document.getElementById("demo");
+element.remove();
+
+let ps = document.getElementsByTagName('p');
+let counter = 0;
+for (let p of ps) {
+  counter++;
+}
+alert(counter);
+
+</script>
+</html>

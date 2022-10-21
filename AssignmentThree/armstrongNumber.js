@@ -6,13 +6,13 @@ let sum = 0;
 
   while(temp > 0){
 
-      rem = temp % 10;
+      rem = temp % 10;//remainder 
 
-      sum+=(rem*rem*rem);
+      sum+=(rem*rem*rem);//cube the remainder and store and add
 
-      temp = parseInt(temp / 10);
+      temp = parseInt(temp / 10);//reduce to get each digit
   }
-  if(sum == n){
+  if(sum == n){//sum of all the digit^3
 
     console.log("Armstrong Number");
   }
