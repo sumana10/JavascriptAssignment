@@ -1,0 +1,1 @@
+str.split("");//conversion from string to array

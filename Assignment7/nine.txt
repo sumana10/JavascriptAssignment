@@ -1,0 +1,1 @@
+Converted input into lowercase/uppercase using inbuilt method of js to get the same output everytime.
