@@ -1,0 +1,9 @@
+What is the difference between a closure and a scope ?
+
+Scope means where we can access specific variable.
+Inner function has access of it's parent lexical environment that's closure.
+
+
+What is a lexical scope and how is it related to closure?
+
+Lexical environment is local memory and it's parent lexical environment.
