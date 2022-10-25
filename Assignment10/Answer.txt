@@ -1,0 +1,14 @@
+
+Higher order function is a function which takes anothers function as parameter.
+
+Callback function is a function which passes as parameter of another function.
+
+map, filter and reduce higher order function in javascript.
+
+filter: is used to filtered out of array elements and create an array.
+
+const arrU = [10, 20, 30, 10, 40]; 
+const unique = arrU.filter((ele, index) => arrU.indexOf(ele) == index );
+console.log(unique);
+
+in the above example filter is higher order function and the anonymous arrow function is a callback function.
