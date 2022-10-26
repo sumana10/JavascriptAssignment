@@ -27,6 +27,33 @@
         
         //user eneter array
         console.log(myinputarr2);
+
+        function check(arr1, arr2, num){
+
+            let str1="", str2="";
+
+            for(let i = 0; i<arr1.length; i++){
+                if(arr1[i] == num)
+                str1 = "Array 1"
+                if(arr2[i] == num)
+                str2 = "Array 2"
+            }
+
+            if((str1.length > 0) && (str2.length > 0))
+            return `${num} in both arrays`
+            else if(str1.length > 0)
+            return `${num} in ${str1}`
+            else if(str2.length > 0)
+            return `${num} in ${str2}`
+            else
+            return `${num} not exist in both of the arrays`
+            // return `${num} in ${str1}${str2}`
+        }
+     const arr =   [ 1, 2, 3, 6, 5 ];
+     const arr2 = [ 4, 6, 1, 8, 2 ];
+     const num = 4;
+        console.log(check(myinputarr,myinputarr2,num))
+
     </script>
 </body>
 </html>

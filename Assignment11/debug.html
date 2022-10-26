@@ -23,16 +23,17 @@ at least three elements */
   
   for (let i = 1; i < arr_size ; i++)
       if (arr[i] > first)
-          arr[i] = first;
+          first = arr[i];
   let second = Number.MIN_VALUE; 
 
   for (let i = 0;i < arr_size ; i++)
-  if (arr[i] > first && arr[i] < second)
-      arr[i] = second;
+  if (arr[i] < first && arr[i] > second)
+     second = arr[i];
+
   let third = Number.MIN_VALUE; 
 
   for (let i = 0;i < arr_size ; i++)
-  if (arr[i] < third &&arr[i] > second)
+  if (arr[i] > third &&arr[i] < second)
   third = arr[i];
 
   document.write("The third Largest " + "element is ", third); 

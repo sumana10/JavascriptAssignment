@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+ 
+<head>
+    <meta charset="utf-8">
+    <title>
+        How to get values from html input
+        array using JavaScript ?
+    </title>
+</head>
+ 
+<body style="text-align: center;">
+     
+    <h1 style="color: green;">
+       iNeuron
+    </h1>
+ 
+    <h3 id="po">Input Array Elements</h3>
+    <form class="" action="index.html" method="post">
+        <input type="text" name="array[]" value="" /><br>
+        <input type="text" name="array[]" value="" /><br>
+        <input type="text" name="array[]" value="" /><br>
+        <input type="text" name="array[]" value="" /><br>
+        <input type="text" name="array[]" value="" /><br>
+        <button type="button" name="button" onclick="Calculate()">
+            Submit
+        </button>
+    </form>
+    <br>
+    <p id="diff"></p>
+    <p id="odd"></p>
+    <p id="even"></p>
+    <p id="avg"></p>
+    <p id="gcd"></p>
+   
+ 
+    <script type="text/javascript">
+     
+        function Calculate() {
+            let input = document.getElementsByName('array[]');
+
+            let sum = 0;
+            let oddSum = 0;
+            let evenSum = 0;
+ 
+            for (var i = 0; i < input.length; i++) {
+
+                let a = input[i];
+               
+                if(i % 2 == 0)
+                oddSum+=parseInt(a.value);
+                else
+                evenSum+=parseInt(a.value);
+
+                sum+=parseInt(a.value);
+                                   
+            }
+            let odd, even;
+            if(input.length % 2 != 0){
+              odd = Math.floor(input.length/2) + 1;
+              even = Math.floor(input.length/2);
+            }else{
+              odd = Math.floor(input.length/2);
+              even = Math.floor(input.length/2);
+            }
+            
+            const gcd = (a, b) => b === 0 ? a : gcd(b, a % b);
+            const result = gcd(oddSum, evenSum);
+            
+            document.getElementById("avg").textContent = `Average: `+sum/input.length;
+            document.getElementById("odd").textContent = `Odd Places: `+odd;
+            document.getElementById("even").textContent = `Even Places: `+even;
+            document.getElementById("gcd").textContent = `GCD: `+result;
+            document.getElementById("diff").textContent = `Difference: `+parseInt(oddSum - evenSum);
+
+           
+        }
+    </script>
+</body>
+ 
+</html>
